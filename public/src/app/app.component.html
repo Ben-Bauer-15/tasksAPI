@@ -1,0 +1,28 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+<form (submit) = 'onSubmit()'>
+  <input type = 'text' name = 'title' [(ngModel)] = 'newTask.title'>
+  <input type = 'text' name = 'description' [(ngModel)] = 'newTask.description'>
+  <input type = 'submit' value = 'Submit'>
+</form>
+<br>
+<br>
+
+<div class = 'taskList'>
+  <div *ngFor = 'let task of allTasks'>
+    <h3>{{task.title}}</h3>
+    <h5>{{task.description}}</h5>
+    <button (click) = 'edit(task.id)'>Edit</button>
+    <button (click) = " 'delete " + {{task.id}} + >Delete</button><br>
+    <br>
+    <br>
+  </div>
+</div>
+
+<div id = 'editTask'>
+
+</div>
+
+
+
+<router-outlet></router-outlet>

@@ -3,6 +3,10 @@ console.log('controllers file')
 
 module.exports = {
     index : function(req, res){
+        res.sendFile(__dirname + 'index.html')
+    },
+    
+    getAllTasks : function(req, res){
         Task.find({}, function(err, tasks){
             if (err){
                 res.send("Something went wrong")
@@ -25,7 +29,7 @@ module.exports = {
     },
 
     makeTask : function(req, res){
-        var newTask = new Task({title : req.params.title, description : req.params.description, completed : false, createdAt : new Date(), updatedAt : new Date()})
+        var newTask = new Task({title : req.body.title, description : req.body.description, completed : false, createdAt : new Date(), updatedAt : new Date()})
         newTask.save(function(err){
             if (err){
                     res.send("Something went wrong")

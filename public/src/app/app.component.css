@@ -1,0 +1,9 @@
+.taskList {
+    display: inline-block;
+    width: 40%;
+}
+
+#editTask {
+    display: inline-block;
+    width: 40%;
+}

@@ -6,11 +6,15 @@ module.exports = function(app){
         controller.index(req, res)
     })
 
+    app.get('/allTasks', function(req, res){
+        controller.getAllTasks(req, res)
+    })
+
     app.get('/task/:id', function(req, res){
       controller.getTask(req, res)  
     })
 
-    app.post('/new/:title/:description/', function(req, res){
+    app.post('/new', function(req, res){
         controller.makeTask(req, res)
     }) 
 
