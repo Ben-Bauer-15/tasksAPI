@@ -6,12 +6,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpService } from './http.service'
 import { HttpClientModule } from '@angular/common/http';
-import { TasksComponent } from './tasks/tasks.component'
+import { TasksComponent } from './tasks/tasks.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TasksComponent
+    TasksComponent,
   ],
   imports: [
     BrowserModule,
