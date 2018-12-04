@@ -12,15 +12,17 @@
   <div *ngFor = 'let task of allTasks'>
     <h3>{{task.title}}</h3>
     <h5>{{task.description}}</h5>
-    <button (click) = 'edit(task.id)'>Edit</button>
-    <button (click) = " 'delete " + {{task.id}} + >Delete</button><br>
+    <button (click) = 'show(task._id)'>Edit</button>
+    <button (click) = "delete(task._id)" >Delete</button><br>
     <br>
     <br>
   </div>
 </div>
 
-<div id = 'editTask'>
-
+<div id = 'editTask' *ngIf = 'currentTask.title != ""'>
+  <input type = 'text' [(ngModel)] = 'currentTask.title'>
+  <input type = 'text' [(ngModel)] = 'currentTask.description'>
+  <button (click) = 'edit()'>Edit</button>
 </div>
 
 

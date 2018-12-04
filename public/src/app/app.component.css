@@ -5,5 +5,7 @@
 
 #editTask {
     display: inline-block;
+    vertical-align: top;
     width: 40%;
+    outline: 1px solid black;
 }

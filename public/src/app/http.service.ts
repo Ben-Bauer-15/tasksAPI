@@ -16,4 +16,12 @@ export class HttpService {
    createTask(obj){
      return this._http.post('/new', obj)
    }
+
+   editTask(obj){
+     return this._http.put('/update/' + obj._id + '/' + obj.title + '/' + obj.description + '/false', obj)
+   }
+
+   deleteTask(id){
+     return this._http.delete('/delete/' + id)
+   }
 }
