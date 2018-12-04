@@ -19,6 +19,7 @@
     <br>
   </div>
 </div>
+<app-tasks></app-tasks>
 
 <div id = 'editTask' *ngIf = 'currentTask.title != ""'>
   <input type = 'text' [(ngModel)] = 'currentTask.title'>
@@ -26,7 +27,6 @@
   <button (click) = 'edit()'>Edit</button>
 </div>
 
-<app-tasks></app-tasks>
 
 
 
